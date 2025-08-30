@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack - Lunch Break Casino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">Blackjack</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Balance</span>
+                    <span class="stat-value" id="balance">$1000</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Wins</span>
+                    <span class="stat-value" id="wins">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Games</span>
+                    <span class="stat-value" id="games">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-board">
+            <section class="dealer-section">
+                <h2 class="section-title">Dealer</h2>
+                <div class="score-display">
+                    <span id="dealer-score">0</span>
+                </div>
+                <div class="card-area" id="dealer-cards"></div>
+            </section>
+
+            <section class="betting-section">
+                <div class="betting-info">
+                    <div class="current-bet">
+                        <span class="bet-label">Current Bet</span>
+                        <span class="bet-amount" id="current-bet">$0</span>
+                    </div>
+                </div>
+                <div class="chips-container">
+                    <div class="chip" data-value="5">$5</div>
+                    <div class="chip" data-value="25">$25</div>
+                    <div class="chip" data-value="50">$50</div>
+                    <div class="chip" data-value="100">$100</div>
+                </div>
+            </section>
+
+            <section class="player-section">
+                <h2 class="section-title">Player</h2>
+                <div class="score-display">
+                    <span id="player-score">0</span>
+                </div>
+                <div class="card-area" id="player-cards"></div>
+            </section>
+        </main>
+
+        <footer class="game-controls">
+            <div class="action-buttons">
+                <button class="btn btn-secondary" id="new-game-btn">New Game</button>
+                <button class="btn btn-primary" id="deal-btn" disabled>Deal</button>
+                <button class="btn btn-accent" id="hit-btn" disabled>Hit</button>
+                <button class="btn btn-warning" id="stand-btn" disabled>Stand</button>
+            </div>
+            <div class="game-message" id="game-message">Place your bet to start playing!</div>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
